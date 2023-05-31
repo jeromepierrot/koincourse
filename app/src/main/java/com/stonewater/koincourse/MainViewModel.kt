@@ -6,6 +6,6 @@ class MainViewModel(
         private val repository: MainRepository // Dependency Injection using "constructor injection"
     ): ViewModel() {
     fun doNetworkCall() {
-        repository.doNetworkCall()
+        println("[Message]: Network call...")
     }
 }

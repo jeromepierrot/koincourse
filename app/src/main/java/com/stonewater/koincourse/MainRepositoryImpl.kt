@@ -1,7 +1,9 @@
 package com.stonewater.koincourse
 
-class MainRepositoryImpl: MainRepository {
+class MainRepositoryImpl(
+    private val api: DummyApi
+): MainRepository {
     override fun doNetworkCall() {
-        println("[Message] Call in progress...")
+        api.callApi()
     }
 }
