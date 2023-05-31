@@ -12,6 +12,8 @@ class MainActivity : ComponentActivity() {
 
 //    private val viewModel by viewModel<MainViewModel>() // injection in case of XML UI Toolkit project
 
+    private val api by inject<DummyApi>() // Lazy injection
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
