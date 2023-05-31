@@ -2,10 +2,9 @@ package com.stonewater.koincourse
 
 import androidx.lifecycle.ViewModel
 
-class MainViewModel: ViewModel() {
-
-    private val repository = MainRepositoryImpl()
-
+class MainViewModel(
+        private val repository: MainRepository // Dependency Injection using "constructor injection"
+    ): ViewModel() {
     fun doNetworkCall() {
         repository.doNetworkCall()
     }
